@@ -1,4 +1,0 @@
-AuthUserFile /usr/home/huange2/public_html/cs300/.htpasswd
-AuthName "Protecting my PRIVATE directory"
-AuthType Basic
-Require valid-user
