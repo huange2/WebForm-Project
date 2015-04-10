@@ -1,0 +1,33 @@
+***** THIS IS USED TO CREATED THE DATABASE FOR INTERNSHIP EVALUATION FORM ******
+
+
+CREATE TABLE EFadmins ( EFadminID INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, EFname VARCHAR(30),EFpassword VARCHAR(50));
+
+CREATE TABLE EFapplicants (EFuserID INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,EFfirstname VARCHAR(30) NOT NULL, EFlastname VARCHAR(30) NOT NULL,EFcompany VARCHAR(30) NOT NULL,EFsupfname VARCHAR(30) NOT NULL,EFsuplname VARCHAR(130) NOT NULL,EFphone VARCHAR(15) NOT NULL,EFgrade VARCHAR(3));
+
+CREATE TABLE ratings (EFuserID INT(6),rating_id INT(6), rating_info VARCHAR(100));
+CREATE TABLE selects (EFuserID INT(6),select_id INT(6),select_info VARCHAR(100) );
+CREATE TABLE questions ( EFuserID INT(6),question_id INT(6),question_info VARCHAR (800) );
+CREATE TABLE ratings_desc (rating_id INT(6) AUTO_INCREMENT PRIMARY KEY, rating_data VARCHAR(100) NOT NULL);
+CREATE TABLE selects_desc (select_id INT(6) AUTO_INCREMENT PRIMARY KEY,select_data VARCHAR(100) NOT NULL);
+CREATE TABLE questions_desc ( question_id INT(6) AUTO_INCREMENT PRIMARY KEY,question_data VARCHAR(800) NOT NULL);
+
+INSERT INTO ratings_desc (rating_data) VALUES('Confromity to the internship agreement');
+INSERT INTO ratings_desc (rating_data) VALUES( 'Conformity to your expectations');
+INSERT INTO ratings_desc (rating_data) VALUES( 'Professionalism');
+INSERT INTO ratings_desc (rating_data) VALUES('Listening and Comprehension skills');
+INSERT INTO ratings_desc (rating_data) VALUES('Organization');
+INSERT INTO selects_desc (select_data) VALUES('Dependability');
+INSERT INTO selects_desc (select_data) VALUES('Accuracy');
+INSERT INTO selects_desc (select_data) VALUES('Overall Performance');
+INSERT INTO selects_desc (select_data) VALUES('Preparation for this job');
+INSERT INTO questions_desc (question_data) VALUES('What do you consider this interns most significant professional strengths?');
+INSERT INTO questions_desc (question_data) VALUES('How could the intern improve professionally?');
+INSERT INTO questions_desc (question_data) VALUES('How well prepared was the intern for this job?');
+INSERT INTO questions_desc (question_data) VALUES('Hypothetically, if your firm had an entry level job opening in this interns field of interest, how likely is it that you would hire him or her?');
+INSERT INTO questions_desc (question_data) VALUES('Would you be interested in having another ISC student intern in the future?');
+INSERT INTO questions_desc (question_data) VALUES('If you are interested in another ISC intern, would their duties be the same as this student intern?');
+INSERT INTO questions_desc (question_data) VALUES('What recommendations, if any, would you make about the ISC internship program?');
+INSERT INTO questions_desc (question_data) VALUES('Other comments:');
+
+INSERT INTO EFadmins(EFname, EFpassword) VALUES('admin1', 'bozo');

@@ -1,0 +1,44 @@
+****** DB creation for TA forms ********
+
+CREATE TABLE TAadmins ( TAadminID INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, TAname VARCHAR(30),TApassword VARCHAR(50));
+
+CREATE TABLE TAapplicants (TAuserID CHAR(9) PRIMARY KEY,TAfirstname VARCHAR(30) NOT NULL, TAlastname VARCHAR(30) NOT NULL,TAemail VARCHAR(100) NOT NULL, TAphone VARCHAR(15) NOT NULL, sponsor_id INT(6) NOT NULL, agreement_id INT(6), student_type VARCHAR(13), date TIMESTAMP);
+
+CREATE TABLE sponsors (sponsor_id INT(6) AUTO_INCREMENT PRIMARY KEY, sponsor_name VARCHAR(30));
+CREATE TABLE agreement (agreement_id INT(6) AUTO_INCREMENT PRIMARY KEY, agreement_info VARCHAR(500));
+CREATE TABLE class_prefs (TAuserid CHAR(9) NOT NULL, class_id INT(6) NOT NULL, class_choice VARCHAR(5) NOT NULL);
+CREATE TABLE classes (class_id INT(6) AUTO_INCREMENT PRIMARY KEY, class_name VARCHAR(10) NOT NULL);
+CREATE TABLE time_prefs ( TAuserid CHAR(9), 8am VARCHAR(6), 9am VARCHAR(6), 10am VARCHAR(6), 11am VARCHAR(6), 12pm VARCHAR(6), 1pm VARCHAR(6), 2pm VARCHAR(6), 3pm VARCHAR(6), 4pm VARCHAR(6), 5pm VARCHAR(6));
+
+INSERT INTO agreement (agreement_info) VALUES('I agree to all the responsiblities of being a good TA.');
+INSERT INTO sponsors (sponsor_name) VALUES('Granier');
+INSERT INTO sponsors (sponsor_name) VALUES('Bover');
+INSERT INTO sponsors (sponsor_name) VALUES('Clauson');
+INSERT INTO sponsors (sponsor_name) VALUES('Fizzano');
+INSERT INTO sponsors (sponsor_name) VALUES('Hearne');
+INSERT INTO sponsors (sponsor_name) VALUES('Hutchinson');
+INSERT INTO sponsors (sponsor_name) VALUES('Johnson');
+INSERT INTO sponsors (sponsor_name) VALUES('Liu');
+INSERT INTO sponsors (sponsor_name) VALUES('Matthews');
+INSERT INTO sponsors (sponsor_name) VALUES('Meehan');
+INSERT INTO sponsors (sponsor_name) VALUES('Nelson');
+INSERT INTO sponsors (sponsor_name) VALUES('Palzer');
+INSERT INTO sponsors (sponsor_name) VALUES('Potts');
+INSERT INTO sponsors (sponsor_name) VALUES('Reedy');
+INSERT INTO sponsors (sponsor_name) VALUES('Rrushi');
+INSERT INTO sponsors (sponsor_name) VALUES('Woodcock');
+INSERT INTO sponsors (sponsor_name) VALUES('Zhang');
+INSERT INTO classes (class_name) VALUES( 'CSCI 101');
+INSERT INTO classes (class_name) VALUES( 'CSCI 102');
+INSERT INTO classes (class_name) VALUES( 'CSCI 103');
+INSERT INTO classes (class_name) VALUES( 'CSCI 140');
+INSERT INTO classes (class_name) VALUES( 'CSCI 141');
+INSERT INTO classes (class_name) VALUES( 'CSCI 145');
+INSERT INTO classes (class_name) VALUES( 'CSCI 172');
+INSERT INTO classes (class_name) VALUES( 'CSCI 202');
+INSERT INTO classes (class_name) VALUES( 'CSCI 247');
+INSERT INTO classes (class_name) VALUES( 'CSCI 301');
+INSERT INTO classes (class_name) VALUES( 'CSCI 314');
+INSERT INTO TAadmins(TAname, TApassword) VALUES('admin1', 'bozo');
+
+

@@ -1,0 +1,16 @@
+CREDITS
+
+images
+	home168.png - http://www.flaticon.com/free-icon/home-page_2144
+	recycle27.png - http://www.flaticon.com/free-icon/recycle-arrows_25115
+	lightGrey.png - http://subtlepatterns.com/
+	paisley.png - http://subtlepatterns.com/
+	wwulogo.png - http://wwu.edu
+
+js
+	JQuery - http://code.jquery.com/jquery-1.11.1.min.js
+	Bootstrap JS - http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js
+	Bootstrap css - http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css
+
+pdf module 
+	fpdf - http://www.fpdf.org
