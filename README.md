@@ -14,10 +14,10 @@ Admins can change context of questions, and description and classes. Also can ac
 If you want to use this you would need to put this on you webserver and construct an config.php . config.php will be consist of your db credentials. Also you would need to run the sql.txt on your db (either through command prompt or mySQL workbench)to set up the database for these webforms. This only works for sql db.
 
 #### Sample config.php
-'''
+```
 <?php
   $dbname = "blah"
   $dbuser = "blah"
   $dbpassword = "blah"
 ?>
-'''
+```
